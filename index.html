@@ -23,10 +23,25 @@
     header p{margin-top:15px;font-size:18px;opacity:.95;}
 
     .buttons{margin-top:30px;}
-    .buttons a{text-decoration:none;padding:14px 28px;margin:5px;border-radius:6px;font-weight:600;display:inline-block;transition:.2s;}
+    .buttons a{
+      text-decoration:none;
+      padding:14px 28px;
+      margin:5px;
+      border-radius:6px;
+      font-weight:600;
+      display:inline-block;
+      transition:.2s;
+    }
     .buttons a:hover{transform:scale(1.05);}
     .primary{background:var(--primary);color:white;}
     .secondary{background:white;color:var(--dark);}
+
+    /* ✅ OPTION 3 LOGIC */
+    .call-btn, .sticky-call { display:none; }
+
+    @media (max-width:768px){
+      .call-btn, .sticky-call { display:inline-block; }
+    }
 
     section{max-width:1100px;margin:80px auto;padding:0 20px;}
     h2{font-size:32px;margin-bottom:20px;}
@@ -52,13 +67,22 @@
     footer{background:var(--dark);color:#aaa;text-align:center;padding:25px;font-size:14px;}
 
     .sticky-call{
-      position:fixed;bottom:20px;right:20px;background:var(--primary);color:white;
-      padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:600;
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:var(--primary);
+      color:white;
+      padding:14px 18px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:600;
       box-shadow:0 10px 20px rgba(0,0,0,.2);
     }
     .sticky-call i{margin-right:8px;}
 
-    @media(max-width:768px){.contact-container{grid-template-columns:1fr;}}
+    @media(max-width:768px){
+      .contact-container{grid-template-columns:1fr;}
+    }
   </style>
 </head>
 
@@ -68,16 +92,16 @@
   <h1>Lindsay Built LLC</h1>
   <p>Decks • Patios • Landscaping • Fences</p>
   <p style="margin-top:10px;font-size:14px;opacity:.85;">Fully Insured • Southwestern Pennsylvania</p>
+
   <div class="buttons">
     <a href="#contact-form" class="primary">Request an Estimate</a>
-    <a href="tel:+17249636116" class="secondary">Call Now</a>
+    <a href="tel:7249636116" class="secondary call-btn">Call Now</a>
   </div>
 </header>
 
 <section>
   <h2>Lindsay Built</h2>
-  <p>Decks, Fences & Outdoor Builds Done Right! LB LLC is proudly serving homeowners in Southwestern Pennsylvania. FREE ESTIMATE CALL NOW
-  </p>
+  <p>Decks, Fences & Outdoor Builds Done Right! LB LLC is proudly serving homeowners in Southwestern Pennsylvania. FREE ESTIMATE CALL NOW</p>
 </section>
 
 <section>
@@ -112,8 +136,9 @@
 <section id="contact-form">
   <h2>Contact Lindsay Built</h2>
   <div class="contact-container">
+
     <div class="contact-info">
-      <p><i class="fa-solid fa-phone"></i> <a href="tel:xxx-xxx-xxxx">724-963-6116</a></p>
+      <p><i class="fa-solid fa-phone"></i> <a href="tel:7249636116">724-963-6116</a></p>
       <p><i class="fa-solid fa-envelope"></i> <a href="mailto:ethan@lindsaybuiltllc.com">ethan@lindsaybuiltllc.com</a></p>
       <p><i class="fa-solid fa-map-marker-alt"></i> Greensboro, PA & Surrounding Areas</p>
     </div>
@@ -124,15 +149,7 @@
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit" class="primary">Send Message</button>
     </form>
-  </div>
-</section>
 
-<section>
-  <h2>Service Area</h2>
-  <p style="text-align:center;">Proudly serving homeowners across Southwestern Pennsylvania.</p>
-  <div style="margin-top:30px;border-radius:12px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,.1);">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6131.333014409097!2d-79.91795735476984!3d39.79203893618727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88356dfc1193e603%3A0xcd0e6ddcc6ce20d7!2sGreensboro%2C%20PA%2015338!5e0!3m2!1sen!2sus!4v1769192841702!5m2!1sen!2sus"
-    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
 </section>
 
@@ -145,7 +162,9 @@
   © Lindsay Built LLC — Decks, Patios, Fences & Landscaping in Southwestern PA
 </footer>
 
-<a href="tel:+17245551234" class="sticky-call"><i class="fa-solid fa-phone"></i>Call Now</a>
+<a href="tel:7249636116" class="sticky-call">
+  <i class="fa-solid fa-phone"></i>Call Now
+</a>
 
 </body>
 </html>
