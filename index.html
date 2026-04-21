@@ -36,11 +36,22 @@
     .primary{background:var(--primary);color:white;}
     .secondary{background:white;color:var(--dark);}
 
-    /* ✅ OPTION 3 LOGIC */
-    .call-btn, .sticky-call { display:none; }
+    /* =========================
+       MOBILE / DESKTOP BEHAVIOR
+       ========================= */
 
+    /* Hide call buttons on desktop */
+    .call-btn,
+    .sticky-call {
+      display:none;
+    }
+
+    /* Show call buttons ONLY on mobile */
     @media (max-width:768px){
-      .call-btn, .sticky-call { display:inline-block; }
+      .call-btn,
+      .sticky-call {
+        display:inline-block;
+      }
     }
 
     section{max-width:1100px;margin:80px auto;padding:0 20px;}
