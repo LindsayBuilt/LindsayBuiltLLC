@@ -37,20 +37,20 @@
     .secondary{background:white;color:var(--dark);}
 
     /* =========================
-       MOBILE / DESKTOP BEHAVIOR
+       FINAL CALL BUTTON CONTROL
        ========================= */
 
-    /* Hide call buttons on desktop */
+    /* DEFAULT (desktop): hide EVERYTHING call-related */
     .call-btn,
     .sticky-call {
-      display:none;
+      display: none !important;
     }
 
-    /* Show call buttons ONLY on mobile */
-    @media (max-width:768px){
+    /* MOBILE ONLY: show call buttons */
+    @media (max-width: 768px) {
       .call-btn,
       .sticky-call {
-        display:inline-block;
+        display: inline-block !important;
       }
     }
 
